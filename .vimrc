@@ -44,15 +44,17 @@ set tabstop=4
 set guifont=courier_new:h13
 "---------end
 
+"taglist-----config
+let Tlist_Show_One_File = 1            "不同时显示多个文件的tag，只显示当前文件的
+let Tlist_Exit_OnlyWindow = 1          "如果taglist窗口是最后一个窗口，则退出vim
+let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口 
+let Tlist_Auto_Open = 1				   "taglist自动开启
 
-
-
-
-
-
-
-
-
+"nerdtree----config
+let NERDTreeShowBookmarks=1 "显示书签
+let NERDTreeMinimalUI=1 "不显示帮助面板
+let NERDTreeDirArrows=1 "目录箭头 1 显示箭头  0传统+-|号
+autocmd VimEnter * NERDTree                                    
 
 
 
