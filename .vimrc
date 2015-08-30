@@ -3,7 +3,7 @@
 "????Ĭ?Ϲ???Ŀ¼
 "cd d:/wamp/www/oarfish
 
-set fileencodings = utf-8,ucs-bom,gb18030,gbk,gb2312
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312
 set termencoding=utf-8
 set encoding=utf-8
 
@@ -19,8 +19,9 @@ Plugin 'gmarik/Vundle.vim'
 "?ļ?Ŀ¼?ṹ??
 Plugin 'scrooloose/nerdtree'
 "????????��
-Plugin 'ctags.vim'
 Plugin 'taglist.vim'
+
+Plugin 'mileszs/ack.vim'
 "??ɫ????
 "Plugin 'tomasr/molokai'
 "Plugin 'flazz/vim-colorschemes'
