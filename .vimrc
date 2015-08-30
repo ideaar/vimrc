@@ -3,6 +3,9 @@
 "进入默认工作目录
 cd d:/wamp/www/oarfish
 
+set fileencodings = utf-8,ucs-bom,gb18030,gbk,gb2312
+set termencoding=utf-8
+set encoding=utf-8
 
 "start--------------------------vundle配置
 set nocompatible
@@ -54,8 +57,8 @@ let Tlist_Auto_Open = 1				   "taglist自动开启
 let NERDTreeShowBookmarks=1 "显示书签
 let NERDTreeMinimalUI=1 "不显示帮助面板
 let NERDTreeDirArrows=1 "目录箭头 1 显示箭头  0传统+-|号
-autocmd VimEnter * NERDTree                                    
-
+map <F8> :NERDTree<cr>
+map <F9> :NERDTreeClose<cr>
 
 
 
