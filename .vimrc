@@ -1,27 +1,27 @@
-"vundle°²×°: git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+"vundle??×°: git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
-"½øÈëÄ¬ÈÏ¹¤×÷Ä¿Â¼
-cd d:/wamp/www/oarfish
+"????Ä¬?Ï¹???Ä¿Â¼
+"cd d:/wamp/www/oarfish
 
 set fileencodings = utf-8,ucs-bom,gb18030,gbk,gb2312
 set termencoding=utf-8
 set encoding=utf-8
 
-"start--------------------------vundleÅäÖÃ
+"start--------------------------vundle????
 set nocompatible
 
 filetype off
-set rtp+=$HOME/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-"vundle¹ÜÀí (±ØĞë)
+"vundle???? (????)
 Plugin 'gmarik/Vundle.vim'
 
-"ÎÄ¼şÄ¿Â¼½á¹¹Ê÷
+"?Ä¼?Ä¿Â¼?á¹¹??
 Plugin 'scrooloose/nerdtree'
-"º¯Êı¡¢±äÁ¿
+"????????Á¿
 Plugin 'ctags.vim'
 Plugin 'taglist.vim'
-"ÅäÉ«·½°¸
+"??É«????
 "Plugin 'tomasr/molokai'
 "Plugin 'flazz/vim-colorschemes'
 
@@ -41,6 +41,8 @@ color desert
 syntax enable
 syntax on
 set nobackup
+setlocal noswapfile
+set backspace=2
 set nu
 set go=
 set tabstop=4
@@ -48,15 +50,15 @@ set guifont=courier_new:h13
 "---------end
 
 "taglist-----config
-let Tlist_Show_One_File = 1            "²»Í¬Ê±ÏÔÊ¾¶à¸öÎÄ¼şµÄtag£¬Ö»ÏÔÊ¾µ±Ç°ÎÄ¼şµÄ
-let Tlist_Exit_OnlyWindow = 1          "Èç¹ûtaglist´°¿ÚÊÇ×îºóÒ»¸ö´°¿Ú£¬ÔòÍË³övim
-let Tlist_Use_Right_Window = 1         "ÔÚÓÒ²à´°¿ÚÖĞÏÔÊ¾taglist´°¿Ú 
-let Tlist_Auto_Open = 1				   "taglist×Ô¶¯¿ªÆô
+let Tlist_Show_One_File = 1            "??Í¬Ê±??Ê¾?????Ä¼???tag??Ö»??Ê¾??Ç°?Ä¼???
+let Tlist_Exit_OnlyWindow = 1          "????taglist??????????Ò»?ö´°¿Ú£????Ë³?vim
+let Tlist_Use_Right_Window = 1         "???Ò²à´°??????Ê¾taglist???? 
+let Tlist_Auto_Open = 1				   "taglist?Ô¶?????
 
 "nerdtree----config
-let NERDTreeShowBookmarks=1 "ÏÔÊ¾ÊéÇ©
-let NERDTreeMinimalUI=1 "²»ÏÔÊ¾°ïÖúÃæ°å
-let NERDTreeDirArrows=1 "Ä¿Â¼¼ıÍ· 1 ÏÔÊ¾¼ıÍ·  0´«Í³+-|ºÅ
+let NERDTreeShowBookmarks=1 "??Ê¾??Ç©
+let NERDTreeMinimalUI=1 "????Ê¾????????
+let NERDTreeDirArrows=1 "Ä¿Â¼??Í· 1 ??Ê¾??Í·  0??Í³+-|??
 map <F8> :NERDTree<cr>
 map <F9> :NERDTreeClose<cr>
 
