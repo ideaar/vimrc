@@ -1,11 +1,15 @@
-"vundle??װ: git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+"vundle安装: git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
-"????Ĭ?Ϲ???Ŀ¼
-"cd d:/wamp/www/oarfish
+"默认工作目录
+cd d:/wamp/www/oarfish
 
+"文件打开保存编码
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312
 set termencoding=utf-8
+"vim内部编码
 set encoding=utf-8
+"提示信息中文
+language messages zh_CN.utf-8
 
 "start--------------------------vundle????
 set nocompatible
@@ -13,16 +17,14 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-"vundle???? (????)
+"vundle 必须
 Plugin 'gmarik/Vundle.vim'
 
-"?ļ?Ŀ¼?ṹ??
 Plugin 'scrooloose/nerdtree'
-"????????��
 Plugin 'taglist.vim'
+Plugin 'kien/ctrlp.vim'
+"Plugin 'mileszs/ack.vim'
 
-Plugin 'mileszs/ack.vim'
-"??ɫ????
 "Plugin 'tomasr/molokai'
 "Plugin 'flazz/vim-colorschemes'
 
@@ -51,19 +53,19 @@ set guifont=courier_new:h13
 "---------end
 
 "taglist-----config
-let Tlist_Show_One_File = 1            "??ͬʱ??ʾ?????ļ???tag??ֻ??ʾ??ǰ?ļ???
-let Tlist_Exit_OnlyWindow = 1          "????taglist??????????һ?����ڣ????˳?vim
-let Tlist_Use_Right_Window = 1         "???Ҳര??????ʾtaglist???? 
-let Tlist_Auto_Open = 1				   "taglist?Զ?????
+let Tlist_Show_One_File = 1
+let Tlist_Exit_OnlyWindow = 1
+let Tlist_Use_Right_Window = 1
+let Tlist_Auto_Open = 1
 
 "nerdtree----config
-let NERDTreeShowBookmarks=1 "??ʾ??ǩ
-let NERDTreeMinimalUI=1 "????ʾ????????
-let NERDTreeDirArrows=1 "Ŀ¼??ͷ 1 ??ʾ??ͷ  0??ͳ+-|??
+let NERDTreeShowBookmarks=1 
+let NERDTreeMinimalUI=1 
+let NERDTreeDirArrows=1
 map <F8> :NERDTree<cr>
 map <F9> :NERDTreeClose<cr>
-
-
+map <F5> :CtrlP<cr>
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 
 
