@@ -11,7 +11,7 @@ set encoding=utf-8
 "提示信息中文
 language messages zh_CN.utf-8
 
-"start--------------------------vundle????
+"start--------------------------vundle配置
 set nocompatible
 
 filetype off
@@ -22,14 +22,16 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'taglist.vim'
+"文件搜索
 Plugin 'kien/ctrlp.vim'
+
+Plugin 'nathanaelkane/vim-indent-guides'
 "Plugin 'mileszs/ack.vim'
 
 "Plugin 'tomasr/molokai'
 "Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
-filetype plugin indent on
 "------------------------------end
 
 
@@ -44,12 +46,19 @@ color desert
 syntax enable
 syntax on
 set nobackup
-setlocal noswapfile
+set noswapfile
 set backspace=2
+set noautoindent
+set shiftwidth=4
+set cindent
 set nu
 set go=
 set tabstop=4
 set guifont=courier_new:h13
+"括号自动补齐
+"inoremap ( ()<ESC>i
+"inoremap [ []<ESC>i
+inoremap { {}<ESC>i
 "---------end
 
 "taglist-----config
@@ -62,12 +71,13 @@ let Tlist_Auto_Open = 1
 let NERDTreeShowBookmarks=1 
 let NERDTreeMinimalUI=1 
 let NERDTreeDirArrows=1
-map <F8> :NERDTree<cr>
-map <F9> :NERDTreeClose<cr>
+map <C-N> :NERDTree<cr>
+map <C-T> :Tlist<cr>
 map <F5> :CtrlP<cr>
-let g:ackprg = 'ag --nogroup --nocolor --column'
 
-
+"缩进效果
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1 
 
 
 
