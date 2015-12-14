@@ -56,7 +56,7 @@ set go=
 set tabstop=4
 set guifont=courier_new:h13
 "indent折叠
-set fdm=indent
+set fdm=marker
 "括号自动补齐
 "inoremap ( ()<ESC>i
 "inoremap [ []<ESC>i
