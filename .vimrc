@@ -60,7 +60,7 @@ set fdm=indent
 "括号自动补齐
 "inoremap ( ()<ESC>i
 "inoremap [ []<ESC>i
-"inoremap { {}<ESC>i
+inoremap { {}<ESC>i<cr><ESC>l
 "---------end
 
 "taglist-----config
