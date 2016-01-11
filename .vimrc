@@ -62,7 +62,7 @@ set fdm=marker
 "括号自动补齐
 "inoremap ( ()<ESC>i
 "inoremap [ []<ESC>i
-inoremap { {}<ESC>i<cr><ESC>l
+"inoremap { {}<ESC>i<cr><ESC>l
 "---------end
 
 "taglist-----config
