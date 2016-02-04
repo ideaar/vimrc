@@ -28,6 +28,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 
 Plugin 'matchit.zip'
+
+Plugin 'fatih/vim-go'
 "Plugin 'mileszs/ack.vim'
 
 "Plugin 'tomasr/molokai'
