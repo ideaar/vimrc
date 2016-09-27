@@ -1,4 +1,5 @@
-"vundle安装: git clone http://github.com/VundleVim/Vundle.Vim ~/.vim/bundle/vundle
+"vundle安装: git clone http://github.com/VundleVim/Vundle.Vim
+"~/.vim/bundle/Vundle.vim
 "安装默认的插件：PluginInstall
 
 "默认工作目录
@@ -16,20 +17,17 @@ language messages zh_CN.utf-8
 set nocompatible
 
 "filetype off
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'VundleVim/Vundle.vim' "目录显示
 Plugin 'scrooloose/nerdtree' "目录显示
 Plugin 'taglist.vim' "函数、变量显示
 Plugin 'kien/ctrlp.vim' "文件搜索
-"Plugin 'nathanaelkane/vim-indent-guides' "垂直对齐显示
-Plugin 'Yggdroot/indentLine'
+Plugin 'Yggdroot/indentLine' "垂直对齐显示
 Plugin 'matchit.zip' "
-Plugin 'fatih/vim-go'
-"Plugin 'mileszs/ack.vim'
-
-"Plugin 'tomasr/molokai'
-"Plugin 'flazz/vim-colorschemes'
+Plugin 'fatih/vim-go' "golang 语法支持
+Plugin 'brookhong/DBGPavim' "php调试插件
 
 call vundle#end()
 "------------------------------end
@@ -119,6 +117,11 @@ let statusEnd=statusKeymap."\ ".statusEncoding.statusRuler."\ ".statusTime
 " 最终状态栏的模式字符串
 let statusString=statusHead.statusBody.statusBlank.statusEnd
 set statusline=%!statusString
+
+" php调试
+let g:dbgRavimOnce = 1
+let g:dbgRavimPort = 9009
+let g:dbgPavimBreakAtEntry = 1
 
 " php文件类型
 augroup filetype_php
